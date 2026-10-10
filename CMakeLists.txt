@@ -14,8 +14,26 @@ include_directories(${EIGEN3_INCLUDE_DIRS})
 
 message(STATUS ">>> Found Eigen3: ${EIGEN3_INCLUDE_DIRS}")
 
-# 注册第 1 阶段的目标可执行文件 (后续有新代码在此追加即可)
+# 注册第目标可执行文件 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/01_line_search/backtracking_line_search_armijo.cpp")
     add_executable(backtracking_line_search_armijo 01_line_search/backtracking_line_search_armijo.cpp)
     target_link_libraries(backtracking_line_search_armijo PRIVATE Eigen3::Eigen)
+endif()
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/01_line_search/strong_wolfe.cpp")
+    add_executable(strong_wolfe 01_line_search/strong_wolfe.cpp)
+    target_link_libraries(strong_wolfe PRIVATE Eigen3::Eigen)
+endif()
+
+
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/02_unconstrained/newton_lm_armijo.cpp")
+    add_executable(newton_lm_armijo 02_unconstrained/newton_lm_armijo.cpp)
+    target_link_libraries(newton_lm_armijo PRIVATE Eigen3::Eigen)
+endif()
+
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/02_unconstrained/gauss_newton_armijo.cpp")
+    add_executable(gauss_newton_armijo 02_unconstrained/gauss_newton_armijo.cpp)
+    target_link_libraries(gauss_newton_armijo PRIVATE Eigen3::Eigen)
 endif()
