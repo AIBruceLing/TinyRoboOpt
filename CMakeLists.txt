@@ -37,3 +37,9 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/02_unconstrained/gauss_newton_armijo.cpp"
     add_executable(gauss_newton_armijo 02_unconstrained/gauss_newton_armijo.cpp)
     target_link_libraries(gauss_newton_armijo PRIVATE Eigen3::Eigen)
 endif()
+
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/03_nonlinear_least_squares/least_squares.cpp")
+    add_executable(least_squares 03_nonlinear_least_squares/least_squares.cpp)
+    target_link_libraries(least_squares PRIVATE Eigen3::Eigen)
+endif()
