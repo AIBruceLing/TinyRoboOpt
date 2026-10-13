@@ -43,3 +43,15 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/03_nonlinear_least_squares/least_squares.
     add_executable(least_squares 03_nonlinear_least_squares/least_squares.cpp)
     target_link_libraries(least_squares PRIVATE Eigen3::Eigen)
 endif()
+
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/03_nonlinear_least_squares/Kaczmarz.cpp")
+    add_executable(Kaczmarz 03_nonlinear_least_squares/Kaczmarz.cpp)
+    target_link_libraries(Kaczmarz PRIVATE Eigen3::Eigen)
+endif()
+
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/02_unconstrained/lbfgs.cpp")
+    add_executable(lbfgs 02_unconstrained/lbfgs.cpp)
+    target_link_libraries(lbfgs PRIVATE Eigen3::Eigen)
+endif()
