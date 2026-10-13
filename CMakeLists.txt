@@ -55,3 +55,9 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/02_unconstrained/lbfgs.cpp")
     add_executable(lbfgs 02_unconstrained/lbfgs.cpp)
     target_link_libraries(lbfgs PRIVATE Eigen3::Eigen)
 endif()
+
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/02_unconstrained/lbfgs_1d.cpp")
+    add_executable(lbfgs_1d 02_unconstrained/lbfgs_1d.cpp)
+    target_link_libraries(lbfgs_1d PRIVATE Eigen3::Eigen)
+endif()
